@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataGuardian - Privacy Score Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1>DataGuardian</h1>
+            </div>
+            <p class="subtitle">Protect your privacy by understanding what apps collect</p>
+        </header>
+
+        <main class="main-content">
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="appSearch" placeholder="Enter app name (e.g., Facebook, Instagram, TikTok)" autocomplete="off">
+                        <button id="searchBtn" class="search-btn">
+                            <i class="fas fa-search"></i>
+                            Check Privacy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="results" class="results-section" style="display: none;">
+                <div class="app-info">
+                    <div class="app-header">
+                        <img id="appIcon" src="" alt="App Icon" class="app-icon">
+                        <div class="app-details">
+                            <h2 id="appName">App Name</h2>
+                            <p id="appCategory">Category</p>
+                        </div>
+                        <div class="privacy-score">
+                            <div class="score-circle">
+                                <span id="privacyScore">0</span>
+                                <small>/100</small>
+                            </div>
+                            <div class="score-label" id="scoreLabel">Privacy Score</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-grid">
+                    <div class="analysis-card">
+                        <div class="card-header">
+                            <i class="fas fa-eye"></i>
+                            <h3>Data Collection</h3>
+                        </div>
+                        <div id="dataCollection" class="card-content">
+                            <!-- Data collection items will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="analysis-card">
+                        <div class="card-header">
+                            <i class="fas fa-key"></i>
+                            <h3>Permissions</h3>
+                        </div>
+                        <div id="permissions" class="card-content">
+                            <!-- Permissions will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="analysis-card">
+                        <div class="card-header">
+                            <i class="fas fa-share-alt"></i>
+                            <h3>Data Sharing</h3>
+                        </div>
+                        <div id="dataSharing" class="card-content">
+                            <!-- Data sharing info will be populated here -->
+                        </div>
+                    </div>
+
+                    <div class="analysis-card">
+                        <div class="card-header">
+                            <i class="fas fa-lock"></i>
+                            <h3>Security & Privacy</h3>
+                        </div>
+                        <div id="securityPrivacy" class="card-content">
+                            <!-- Security info will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendations">
+                    <h3><i class="fas fa-lightbulb"></i> Privacy Recommendations</h3>
+                    <div id="recommendations" class="recommendations-list">
+                        <!-- Recommendations will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>App Not Found</h3>
+                <p>We couldn't find privacy information for this app. Try searching for a different app name.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 DataGuardian. Privacy information is based on publicly available data and app store listings.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
